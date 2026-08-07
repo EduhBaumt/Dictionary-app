@@ -16,34 +16,42 @@
       src="https://kit.fontawesome.com/5b4f27522e.js"
       crossorigin="anonymous"
     ></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
   </head>
   <body>
-    <audio id="sound"></audio>
-    <div class="container" id="container">
-      <div class="search-content">
-        <input type="text" placeholder="Search for any word..." id="inp-text" />
-        <button type="submit" id="inp-button">Search</button>
-      </div>
-      <div class="result" id="result">
-        <div class="word" id="word">
-          <h3>Sample</h3>
-          <button><i class="fa-solid fa-volume"></i></button>
+    <div class="section">
+      <h1 class="title">Dictionary app</h1>
+      <div class="container" id="container">
+        <div class="search-content">
+          <input
+            type="text"
+            placeholder="Search for any word..."
+            id="inp-text"
+          />
+          <button type="submit" id="inp-button">Search</button>
         </div>
-        <div class="details" id="details">
-          <p>pos</p>
-          <p>/sample/</p>
-        </div>
-        <p class="word-meaning" id="word-meaning">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
-          molestias?
-        </p>
-        <p class="word-example" id="word-example">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-          veritatis.
-        </p>
+        <div class="result" id="result"></div>
       </div>
     </div>
+    <footer class="footer-container">
+      <p class="footer-text">Made by: Eduh Baumt</p>
+      <div class="footer-icons-content">
+        <a
+          class="footer-icon"
+          href="https://www.linkedin.com/in/eduardo-baumart/"
+          ><i class="devicon-linkedin-plain"></i
+        ></a>
 
+        <a class="footer-icon" href="https://github.com/EduhBaumt"
+          ><i class="devicon-github-original"></i
+        ></a>
+      </div>
+    </footer>
     <script src="main.js"></script>
   </body>
 </html>
