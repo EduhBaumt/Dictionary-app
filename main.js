@@ -5,11 +5,11 @@ const btn = document.getElementById("inp-button");
 
 btn.addEventListener("click", () => {
   let inpText = document.getElementById("inp-text").value;
-  console.log(inpText);
   fetch(`${url}${inpText}`).then((response) =>
-    response.json().then((data) => {
-      console.log(data);
-      result.innerHTML = ` 
+    response
+      .json()
+      .then((data) => {
+        result.innerHTML = ` 
        <div class="word" id="word">
           <h3>${inpText}</h3>
         </div>
@@ -23,10 +23,9 @@ btn.addEventListener("click", () => {
         <p class="word-example" id="word-example">
           ${data[0].meanings[0].definitions[0].example || ""}
         </p>`;
-    }),
+      })
+      .catch(() => {
+        result.innerHTML = `<h3 class="error-message" > Couldn't find the word...</h3>`;
+      }),
   );
 });
-
-function playSound() {
-  sound.play();
-}
