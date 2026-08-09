@@ -1,10 +1,19 @@
 const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 const result = document.getElementById("result");
-const sound = document.getElementById("sound");
-const btn = document.getElementById("inp-button");
+const form = document.getElementById("search-content");
 
-btn.addEventListener("click", () => {
+function checkInput(value) {
+  return value.trim() !== "";
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
   let inpText = document.getElementById("inp-text").value;
+
+  if (!checkInput(inpText)) {
+    return;
+  }
+
   fetch(`${url}${inpText}`).then((response) =>
     response
       .json()
